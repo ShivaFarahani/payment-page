@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.optimizely.com/js/29563000142.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Page</h1>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'CreditCard')">Credit Card</button>
+            <button class="tablinks" onclick="openTab(event, 'DirectDebit')">Direct Debit</button>
+        </div>
+
+        <div id="CreditCard" class="tabcontent">
+            <h3>Credit Card Payment</h3>
+            <form>
+                <label for="cc-name">Name on Card</label>
+                <input type="text" id="cc-name" name="cc-name" required>
+                
+                <label for="cc-number">Card Number</label>
+                <input type="text" id="cc-number" name="cc-number" required>
+                
+                <label for="cc-expiry">Expiry Date</label>
+                <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY" required>
+                
+                <label for="cc-cvc">CVC</label>
+                <input type="text" id="cc-cvc" name="cc-cvc" required>
+                
+                <button type="submit">Pay with Credit Card</button>
+            </form>
+        </div>
+
+        <div id="DirectDebit" class="tabcontent">
+            <h3>Direct Debit Payment</h3>
+            <form>
+                <label for="dd-name">Account Holder Name</label>
+                <input type="text" id="dd-name" name="dd-name" required>
+                
+                <label for="dd-account">Account Number</label>
+                <input type="text" id="dd-account" name="dd-account" required>
+                
+                <label for="dd-bank">Bank Name</label>
+                <input type="text" id="dd-bank" name="dd-bank" required>
+                
+                <label for="dd-routing">Routing Number</label>
+                <input type="text" id="dd-routing" name="dd-routing" required>
+                
+                <button type="submit">Pay with Direct Debit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
